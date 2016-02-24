@@ -13,30 +13,13 @@ block content
      h3(class="text-center letraslogan3") Lista de Tecnologias
      br
      div(class="row")
+     each dat in datas
        div(class="col-md-3 wow fadeInLeft")
          div(class="card hoverable text-center")
             articule
-              h2(class="letraslogan1") Ruby on Rail
-              img(src="images/ruby-logo.png" class="tamano")
-              p(class="descripcion") Lenguaje de Programacion de la Actulidad
-
-       div(class="col-md-3 wow fadeInLeft")
-         div(class="card hoverable text-center")
-            articule
-              h2(class="letraslogan1") PHP
-              img(src="images/php.png" class="tamano")
-              p(class="descripcion") Lenguaje de Programacion de la Actulidad
-
-       div(class="col-md-3 wow fadeInLeft")
-         div(class="card hoverable text-center")
-            articule
-              h2(class="letraslogan1") PYTHON
-              img(src="images/python.png" class="tamano")
-              p(class="descripcion") Lenguaje de Programacion de la Actulidad
-
-       div(class="col-md-3 wow fadeInLeft")
-         div(class="card hoverable text-center")
-            articule
-              h2(class="letraslogan1") NODEJS
-              img(src="images/node.png" class="tamano")
-              p(class="descripcion") Lenguaje de Programacion de la Actulidad
+              h2(class="letraslogan1") #{dat.Titulo}
+              img(src="images/#{dat.ImageUrl}" class="tamano")
+              div(class="card-content")
+                 h2(class="letraslogan1 borde") Descripcion
+                 p(class="descripcion") #{dat.Descripcion}
+                 p(class="descripcion") C$ #{dat.Precio}

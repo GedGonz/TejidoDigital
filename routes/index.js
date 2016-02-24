@@ -22,7 +22,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/servicios', function(req, res, next) {
-  res.render('services/servicios', { title: 'Express' });
+
+  Tecnologias.find(function(err,data){
+    console.log(data)
+    res.render('services/servicios', { datas: data });
+  })
+  
 });
 
 router.get('/servicios/new', function(req, res, next) {
