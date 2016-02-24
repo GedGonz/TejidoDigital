@@ -1,0 +1,49 @@
+extends ../layout
+
+block content
+ div(class="headers")
+   nav(class="text-center spacio")
+    a(class="",href="/") Inicio
+    a(class="",href="/servicios/new") Registro
+    a(class="",href="/servicios") Tecnologias
+    a(class="",href="#") About
+    a(class="",href="#") Contacto
+  div(class="container")
+   div(class="row text-center" )
+      div(class="col-md-3")
+      div(class="col-md-6")
+         br
+         br
+         br
+         br
+         div(class="card hoverable text-center pading wow bounceInDown")
+             h5(class="") Agregar Servicio
+             form(action='/servicios/save' method='POST' style="margin-top:2em;")
+                div(class="input-field col-md-12")
+                    input(name="titulo" id="last_name" type="text" class="validate")
+                    label(for="last_name") Titulo
+
+                div(class="input-field col-md-12")
+                    textarea(class="materialize-textarea" name="descripcion" id="last_name" type="text" class="validate")
+                    label(for="last_name") Descripcion
+                    br
+                    br
+                div(class="row")
+                  div(class="col-md-3")
+                  div(class="col-md-3")
+                     label(for="last_name") Image
+                     input(class="text-center" name="image" id="last_name" type="file" class="validate")
+                 
+
+                div(class="input-field col-md-12")
+                 input(name="precio" id="last_name" type="number" class="validate")
+                 label(for="last_name") Precio
+                 br
+                 br
+                 br
+                div(class="form-group")
+                    button(type="submit" class="btn btn-primary btn-block waves-effect waves-light") Registrar
+                    a(href="/" class="btn btn-danger btn-block waves-effect waves-light") Cancelar
+                    br
+                    br
+      div(class="col-md-3") 

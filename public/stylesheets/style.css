@@ -1,0 +1,68 @@
+
+img
+{
+	max-width: 100%;
+}
+.pading
+{
+	padding-top: 2em;
+	padding-left: 2em;
+	padding-right: 2em;
+
+}
+.salto
+{
+	margin-top: 10em;
+}
+.letraslogan1
+{
+	color: #00887c;
+	font-family: "Arial", Garamond, 'Comic Sans';
+	font-size: 1.2em;
+}
+.letraslogan2
+{
+	color: #000000;
+    font-family: "Arial", Garamond, 'Comic Sans';
+	font-size: 1.3em;
+}
+.spacio>a
+{
+ padding-left: 1em;
+}
+.row
+{
+	margin-right: 15px;
+}
+.tamano
+{
+width: 200px;
+height: 150px;
+
+}
+.descripcion
+{
+	color: #000000;
+    font-family: "Arial", Garamond, 'Comic Sans';
+	font-size: 1em;
+}
+
+.letraslogan3
+{
+color: #2196F3;
+font-family: "Arial", Garamond, 'Comic Sans';
+font-size: 1.5em;
+}
+
+.divbutton
+{
+	height: 10em;
+}
+
+.headers
+{
+	background: #E5E5E5;
+	height: 2em;
+	box-shadow: 0 0 5px 0;
+}
+
