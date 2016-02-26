@@ -18,7 +18,7 @@ block content
          br
          div(class="card hoverable text-center pading wow bounceInDown")
              h5(class="") Agregar Servicio
-             form(action='/servicios/save' method='POST' style="margin-top:2em;")
+             form(method='POST', enctype='multipart/form-data', action='/servicios/save')
                 div(class="input-field col-md-12")
                     input(name="titulo" id="last_name" type="text" class="validate")
                     label(for="last_name") Titulo
@@ -32,7 +32,7 @@ block content
                   div(class="col-md-3")
                   div(class="col-md-3")
                      label(for="last_name") Image
-                     input(class="text-center" name="image" id="last_name" type="file" class="validate")
+                     input(class="text-center" name="image" id="last_name" type="file")
                  
 
                 div(class="input-field col-md-12")
