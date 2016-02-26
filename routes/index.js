@@ -26,7 +26,7 @@ var storage =   multer.diskStorage({
 
 /*Coneccion a Monogodb*/
 //mongodb://ged:gedgonz791@ds015478.mongolab.com:15478/tejido
-mongoose.connect("mongodb://localhost/tejido");
+mongoose.connect("mongodb://ged:gedgonz791@ds015478.mongolab.com:15478/tejido");
 
 //Definir nuestro esquema de la Tabla Tencnologias
 var TecnoSchema=
