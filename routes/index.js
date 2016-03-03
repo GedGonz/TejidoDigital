@@ -1,24 +1,20 @@
 var express = require('express');
 var mongoose= require('mongoose');/*Importamos la libreria mongodb*/
 var router = express.Router();
-var multer = require('multer');
-var nameimage="";
-var storage =   multer.diskStorage({
-  destination: function (req, file, callback) {
-     var tipo=file.mimetype;
- if(tipo=='image/png' || tipo=='image/jpg' || tipo=='image/jpeg')
- {
-  console.log(file.originalname);
-    callback(null, './public/uploads/');
- }
+var cloudinary = require('cloudinary');
+var multer= require('multer');
+var app=express();
 
-     
-    
-  },
-  filename: function (req, file, callback) {
-      nameimage=file.originalname;
-    callback(null, file.originalname);
-  }
+//pp.use(multer({dest:"./uploads"}).single("image"));
+
+var upload = multer({dest:'./uploads'});
+
+var cpUpload = upload.single('image');
+
+cloudinary.config({ 
+  cloud_name: 'gedgonz', 
+  api_key: '817862158519284', 
+  api_secret: 'Yi7Usj78XdZhcpnHzwquG9fvt3E' 
 });
 
 //var upload = multer({ storage : storage}).single('image');
@@ -57,7 +53,7 @@ router.get('/servicios/new', function(req, res, next) {
   res.render('services/new', { title: 'Express' });
 });
 //var fs=require('fs');
-router.post('/servicios/save',multer({ storage : storage}).single('image'),function(req, res, next) {
+router.post('/servicios/save',cpUpload,function(req, res, next) {
  
 
 
@@ -67,16 +63,17 @@ router.post('/servicios/save',multer({ storage : storage}).single('image'),funct
   {
   Titulo:req.body.titulo,
   Descripcion:req.body.descripcion,
-  ImageUrl:nameimage,
+  ImageUrl:"image.png",
   Precio:req.body.precio
   }
 
 
-  var Tecno=new Tecnologias(data);
-  Tecno.save(function(err)
+  var Tecno=new Tecnologias(req.file);
+  console.log(req.file);
+  /*Tecno.save(function(err)
   {
     console.log(Tecno);
-  })
+  })*/
 
 
   res.render('index');
