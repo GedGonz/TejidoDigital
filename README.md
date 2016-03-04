@@ -2,15 +2,15 @@
 Sistema para publicar Tecnologias ofrecidas por la pagina
 
 # Tecnologias
-+NodeJS
++ NodeJS<br>
  para correr entorno JavaScript a lado del Servidor.
-+Express
++ Express<br>
  Como FrameWork de NodeJS para el lado del cliente.
-+Jade
++ Jade<br>
  Preprocesador HTML.
-+Mongoose 
++ Mongoose <br>
  Dependencia en NodeJS para conectar Mongodb.
-+Cloudinary 
++ Cloudinary <br>
  Como host para las imagenes.
  
 # WebSite
