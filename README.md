@@ -5,7 +5,7 @@ Sistema para publicar Tecnologias ofrecidas por la pagina
 + NodeJS<br>
  para correr entorno JavaScript a lado del Servidor.
 + Express<br>
- Como FrameWork de NodeJS para el lado del cliente.
+ Como FrameWork para el desarrollo en NodeJS.
 + Jade<br>
  Preprocesador HTML.
 + Mongoose <br>
